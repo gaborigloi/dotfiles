@@ -175,6 +175,7 @@ bar {
 workspace_layout tabbed
 hide_edge_borders both
 exec firefox
+exec thunderbird
 exec compton -b --backend glx --vsync opengl-swc
 bindsym $mod+Shift+w exec remmina --connect=$HOME/.remmina/1502122359842.remmina
 
@@ -193,3 +194,8 @@ mode "$mode_display" {
 }
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
+# Re-press the current workspace number to go back to where you came from
+workspace_auto_back_and_forth yes
+# Jump between last two workspaces
+bindsym $mod+z workspace back_and_forth
+bindsym $mod+Shift+z move container to workspace back_and_forth
