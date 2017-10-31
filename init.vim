@@ -62,8 +62,10 @@ autocmd FileType text setlocal textwidth=78
 " remember undo list after closing file
 set undofile
 
-" use ESC to exit terminal mode
-tnoremap <Esc> <C-\><C-n>
+if has('nvim')
+  " use ESC to exit terminal mode
+  tnoremap <Esc> <C-\><C-n>
+endif
 
 " ******************************
 " ALE configuration
