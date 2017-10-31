@@ -2,6 +2,7 @@
 
 set -uex
 
+mkdir -p ~/.config/nvim
 ln -s $PWD/init.vim ~/.config/nvim/
 
 # install vim-plug
