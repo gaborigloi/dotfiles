@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eux
+
 # https://wiki.archlinux.org/index.php/Fish
 mkdir -p ~/.config/fish/functions/
 ln -s $PWD/config.fish ~/.config/fish/
