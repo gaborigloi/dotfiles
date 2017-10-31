@@ -79,6 +79,8 @@ let g:ale_lint_on_enter = 0
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+let g:ale_python_pylint_executable = 'pylint3'
+
 " ******************************
 " vim-grepper
 " ******************************
