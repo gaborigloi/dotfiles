@@ -62,6 +62,10 @@ autocmd FileType text setlocal textwidth=78
 " remember undo list after closing file
 set undofile
 
+if !has('nvim')
+  set undodir=/tmp
+endif
+
 if has('nvim')
   " use ESC to exit terminal mode
   tnoremap <Esc> <C-\><C-n>
