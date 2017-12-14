@@ -1,10 +1,12 @@
-let g:opam_share_dir = substitute(system('opam config var share'),'\n$','','''')
-let g:ocaml_merlin = g:opam_share_dir . "/merlin/vim"
-let g:ocaml_ocp_indent = g:opam_share_dir . "/ocp-indent/vim"
+if executable("opam")
+  let g:opam_share_dir = substitute(system('opam config var share'),'\n$','','''')
+  let g:ocaml_merlin = g:opam_share_dir . "/merlin/vim"
+  let g:ocaml_ocp_indent = g:opam_share_dir . "/ocp-indent/vim"
 
-let g:ocaml_has_ocpindent = 1
-execute "set rtp+=" . g:ocaml_ocp_indent
-execute "set rtp+=" . g:ocaml_merlin
+  let g:ocaml_has_ocpindent = 1
+  execute "set rtp+=" . g:ocaml_ocp_indent
+  execute "set rtp+=" . g:ocaml_merlin
+endif
 
 call plug#begin()
 
