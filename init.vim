@@ -67,6 +67,7 @@ set undofile
 
 if !has('nvim')
   set undodir=/tmp
+  set hlsearch
 endif
 
 if has('nvim')
