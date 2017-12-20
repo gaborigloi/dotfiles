@@ -43,6 +43,7 @@ set number
 set cursorline
 
 set tabstop=2
+set softtabstop=0
 set shiftwidth=2
 set smarttab
 set expandtab
