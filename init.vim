@@ -28,6 +28,9 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 " Can format Python code with yapf
 Plug 'Chiel92/vim-autoformat'
 
+" Syntax highlighting for the ion shell
+Plug 'vmchale/ion-vim'
+
 call plug#end()
 
 " Change the working directory to that of the current file
