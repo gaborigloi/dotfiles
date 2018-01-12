@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=My XenIA desktop
+Icon=preferences-desktop-remote-desktop
+Exec=xfreerdp /v:10.71.11.230 /p:xenroot01T /u:gabor /w:1000 /h:700
+NoDisplay=false
+Categories=Network;
+StartupNotify=false
+Terminal=false
