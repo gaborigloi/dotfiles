@@ -6,7 +6,8 @@ curl https://sh.rustup.rs -sSf | sh
 source "$HOME/.cargo/env"
 
 cargo install cargo-update
-cargo install ripgrep
+sudo dnf install ripgrep || cargo install ripgrep
+sudo dnf install exa || true
 cargo install --git https://github.com/sharkdp/fd
 cargo install ion-shell
 
