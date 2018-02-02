@@ -2,4 +2,6 @@
 
 set -eux
 
-ln -s $PWD/applications ~/.local/share/
+for f in $PWD/applications/*; do
+	ln -s $f ~/.local/share/applications
+done
