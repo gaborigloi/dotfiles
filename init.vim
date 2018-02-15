@@ -59,6 +59,9 @@ set scrolloff=5
 set ignorecase
 set smartcase
 
+" Start searching as I type
+set incsearch
+
 " Clear search highlight when pressing CTRL+L
 nnoremap <C-L> :nohlsearch<CR><C-L>
 
@@ -96,3 +99,6 @@ let g:ale_python_pylint_executable = 'pylint-3'
 " vim-grepper
 " ******************************
 let g:grepper = {'tools': ['rg']}
+" Use the gs operator with a motion for searching
+nmap gs  <plug>(GrepperOperator)
+xmap gs  <plug>(GrepperOperator)
