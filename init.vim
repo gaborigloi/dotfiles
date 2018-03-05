@@ -25,8 +25,8 @@ Plug 'w0rp/ale'
 " Search from vim, supports ripgrep
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
-" Can format Python code with yapf
-Plug 'Chiel92/vim-autoformat'
+" Formatting code
+Plug 'sbdchd/neoformat'
 
 " Syntax highlighting for the ion shell
 Plug 'vmchale/ion-vim'
