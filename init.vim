@@ -45,6 +45,10 @@ set number
 " highlight the line of the cursor
 set cursorline
 
+" Always enable cursor shape change for insert mode
+" - see https://github.com/neovim/neovim/wiki/FAQ#how-to-change-cursor-shape-in-the-terminal
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+
 set tabstop=2
 set softtabstop=0
 set shiftwidth=2
