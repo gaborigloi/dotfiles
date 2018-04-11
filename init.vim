@@ -44,7 +44,17 @@ Plug 'vmchale/ion-vim'
 " For previewing markdown
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
+" Colorschemes
+"Plug 'jnurmine/Zenburn'
+Plug 'NLKNguyen/papercolor-theme'
+
 call plug#end()
+
+"let g:zenburn_high_Contrast=1
+"colorscheme zenburn
+
+set background=dark
+colorscheme PaperColor
 
 " Change the working directory to that of the current file
 set autochdir
