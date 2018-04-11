@@ -9,7 +9,7 @@ rustup completions fish > ~/.config/fish/completions/rustup.fish
 
 cargo install cargo-update
 sudo dnf install ripgrep || cargo install ripgrep
-sudo dnf install exa || true
+sudo dnf install exa || cargo install exa
 cargo install --git https://github.com/sharkdp/fd
 rustup run nightly cargo install --git https://github.com/redox-os/ion/
 cargo install tokei
