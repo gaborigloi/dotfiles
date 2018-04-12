@@ -13,3 +13,4 @@ There is a `setup-X.sh` file for most components that configures it with the con
 * neovim: `bash setup-vim.sh`
 * Python and shell script linters for vim/neovim: `bash setup-linters.sh`
 * OCaml and OPAM for XenServer development: `bash setup-opam.sh`
+* Setup Rust and install some useful development tools written in Rust: `bash setup-rust.sh`
