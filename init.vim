@@ -44,6 +44,9 @@ Plug 'vmchale/ion-vim'
 " For previewing markdown
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
+" Viewing git changed lines
+Plug 'airblade/vim-gitgutter', { 'on': ['GitGutterEnable'] }
+
 " Colorschemes
 "Plug 'jnurmine/Zenburn'
 Plug 'NLKNguyen/papercolor-theme'
