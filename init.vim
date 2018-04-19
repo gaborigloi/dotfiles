@@ -59,6 +59,9 @@ call plug#end()
 set background=dark
 colorscheme PaperColor
 
+" Enable the mouse
+set mouse=a
+
 " Change the working directory to that of the current file
 set autochdir
 
