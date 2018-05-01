@@ -13,6 +13,7 @@ sudo dnf install exa || cargo install exa
 cargo install --git https://github.com/sharkdp/fd
 rustup run nightly cargo install --git https://github.com/redox-os/ion/
 cargo install tokei
+cargo install bat
 
 if [ -z $NOX ]; then
   # from https://github.com/jwilm/alacritty
