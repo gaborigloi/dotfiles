@@ -14,6 +14,7 @@ cargo install --git https://github.com/sharkdp/fd
 rustup run nightly cargo install --git https://github.com/redox-os/ion/
 cargo install tokei
 cargo install bat
+cargo install amp smith
 
 if [ -z $NOX ]; then
   # from https://github.com/jwilm/alacritty
