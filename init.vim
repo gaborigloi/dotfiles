@@ -47,6 +47,15 @@ Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 " Viewing git changed lines
 Plug 'airblade/vim-gitgutter', { 'on': ['GitGutterEnable'] }
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'copy/deoplete-ocaml'
+
 " Colorschemes
 "Plug 'jnurmine/Zenburn'
 Plug 'NLKNguyen/papercolor-theme'
@@ -131,3 +140,18 @@ let g:grepper = {'tools': ['rg']}
 " Use the gs operator with a motion for searching
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
+
+" ******************************
+" deoplete
+" ******************************
+let g:deoplete#enable_at_startup = 1
+
+let g:deoplete#ignore_sources = {}
+let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
+
+let g:deoplete#complete_method = "complete"
+let g:deoplete#auto_complete_delay = 0
+let g:merlin_completion_with_doc = 1
+
+" close the scratch window when the completion is over
+autocmd CompleteDone * silent! pclose!
