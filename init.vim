@@ -105,10 +105,17 @@ if !has('nvim')
   set hlsearch
 endif
 
+" ******************************
+" Keyboard mappings
+" ******************************
+
 if has('nvim')
   " use ESC to exit terminal mode
   tnoremap <Esc> <C-\><C-n>
 endif
+
+autocmd FileType ocaml
+  \ nmap <silent><buffer> <LocalLeader>d :MerlinDocument<CR>|
 
 " ******************************
 " ALE configuration
