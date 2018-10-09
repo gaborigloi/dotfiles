@@ -24,7 +24,7 @@ call plug#begin()
 Plug 'rgrinberg/vim-ocaml'
 
 " fish shell
-Plug 'kopischke/fish.vim'
+Plug 'dag/vim-fish'
 
 " Plugin for removing trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
