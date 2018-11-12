@@ -138,3 +138,8 @@ let g:grepper = {'tools': ['rg']}
 " Use the gs operator with a motion for searching
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
+
+" ******************************
+" vim-markdown-composer
+" ******************************
+let g:markdown_composer_autostart = 0
