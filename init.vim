@@ -4,8 +4,12 @@ if executable("opam")
   let g:ocaml_ocp_indent = g:opam_share_dir . "/ocp-indent/vim"
 
   let g:ocaml_has_ocpindent = 1
-  execute "set rtp+=" . g:ocaml_ocp_indent
-  execute "set rtp+=" . g:ocaml_merlin
+  if filereadable(g:ocaml_ocp_indent)
+    execute "set rtp+=" . g:ocaml_ocp_indent
+  endif
+  if filereadable(g:ocaml_merlin)
+    execute "set rtp+=" . g:ocaml_merlin
+  endif
 endif
 
 function! BuildComposer(info)
