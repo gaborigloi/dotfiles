@@ -1,12 +1,12 @@
 if executable("opam")
   let g:opam_share_dir = substitute(system('opam config var share'),'\n$','','''')
-  let g:ocaml_merlin = g:opam_share_dir . "/merlin/vim"
-  let g:ocaml_ocp_indent = g:opam_share_dir . "/ocp-indent/vim"
 
-  let g:ocaml_has_ocpindent = 1
+  let g:ocaml_ocp_indent = g:opam_share_dir . "/ocp-indent/vim"
   if filereadable(g:ocaml_ocp_indent)
+    let g:ocaml_has_ocpindent = 1
     execute "set rtp+=" . g:ocaml_ocp_indent
   endif
+  let g:ocaml_merlin = g:opam_share_dir . "/merlin/vim"
   if filereadable(g:ocaml_merlin)
     execute "set rtp+=" . g:ocaml_merlin
   endif
@@ -28,7 +28,7 @@ call plug#begin()
 Plug 'rgrinberg/vim-ocaml'
 
 " fish shell
-Plug 'dag/vim-fish'
+Plug 'dag/vim-fish', { 'for': 'fish' }
 
 " Plugin for removing trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
@@ -39,29 +39,23 @@ Plug 'w0rp/ale'
 " Search from vim, supports ripgrep
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
-" Formatting code
-Plug 'sbdchd/neoformat'
-
-" Syntax highlighting for the ion shell
-Plug 'vmchale/ion-vim'
-
 " For previewing markdown
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'euclio/vim-markdown-composer', { 'for': 'markdown', 'do': function('BuildComposer') }
 
 " Viewing git changed lines
 Plug 'airblade/vim-gitgutter', { 'on': ['GitGutterEnable'] }
 
 " Colorschemes
-"Plug 'jnurmine/Zenburn'
+Plug 'jnurmine/Zenburn'
 Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
-"let g:zenburn_high_Contrast=1
-"colorscheme zenburn
+let g:zenburn_high_Contrast=1
+colorscheme zenburn
 
-set background=dark
-colorscheme PaperColor
+"set background=dark
+"colorscheme PaperColor
 
 " Enable the mouse
 set mouse=a
