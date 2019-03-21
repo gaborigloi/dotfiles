@@ -101,6 +101,7 @@ set undofile
 if !has('nvim')
   set undodir=/tmp
   set hlsearch
+  set backspace=indent,eol,start
 endif
 
 " ******************************
