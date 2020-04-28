@@ -22,6 +22,19 @@ function! BuildComposer(info)
   endif
 endfunction
 
+" Install vim-plug
+if has('nvim')
+  if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  endif
+else
+  if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  endif
+endif
+
 call plug#begin()
 
 " OCaml
@@ -35,6 +48,9 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Syntax checking and linting that works with OCaml, Python, bash, ...
 Plug 'w0rp/ale'
+
+" golang development
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 
 " Search from vim, supports ripgrep
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
