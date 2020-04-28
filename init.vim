@@ -49,9 +49,6 @@ Plug 'ntpeters/vim-better-whitespace'
 " Syntax checking and linting that works with OCaml, Python, bash, ...
 Plug 'w0rp/ale'
 
-" golang development
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-
 " Search from vim, supports ripgrep
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
